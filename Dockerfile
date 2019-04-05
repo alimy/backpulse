@@ -1,6 +1,6 @@
 FROM golang:alpine AS binaryBuilder
 
-RUN apk add --no-cache git
+RUN apk --no-cache --no-progress add --virtual build-deps build-base git
 
 WORKDIR /go/src/github.com/backpulse/core
 COPY . .
