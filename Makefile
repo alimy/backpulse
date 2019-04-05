@@ -8,13 +8,16 @@ PACKAGES ?= $(shell GO111MODULE=on $(GO) list ./...)
 VETPACKAGES ?= $(shell GO111MODULE=on $(GO) list ./...)
 GOFILES := $(shell find . -name "*.go" -type f)
 
+LDFLAGS += -X "github.com/backpulse/core/version.BuildTime=$(shell date -u '+%Y-%m-%d %I:%M:%S %Z')"
+LDFLAGS += -X "github.com/backpulse/core/version.GitHash=$(shell git rev-parse HEAD)"
+
 .PHONY: default
 default: build
 
 .PHONY: build
 build: fmt
 	$(GO_ON) mod download
-	$(GO_ON) build -o $(BIN_TARGET) github.com/backpulse/core
+	$(GO_ON) build -ldflags '$(LDFLAGS)' -o $(BIN_TARGET) github.com/backpulse/core
 
 .PHONY: ci
 ci: misspell lint vet test

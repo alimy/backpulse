@@ -1,41 +1,20 @@
 package main
 
 import (
-	"log"
-	"net/http"
-	"os"
+	"github.com/backpulse/core/cmd/core"
 
-	"github.com/backpulse/core/database"
-	"github.com/backpulse/core/routes"
-	"github.com/backpulse/core/utils"
-	"github.com/rs/cors"
+	_ "github.com/backpulse/core/cmd/serve"
+	_ "github.com/backpulse/core/cmd/version"
 )
 
 func main() {
-	log.SetFlags(log.LstdFlags | log.Lshortfile)
-	config := utils.GetConfig()
+	// Setup root cli command of application
+	core.Setup(
+		"backpulse",                 // command name
+		"Provide backpulse service", // command short describe
+		"Provide backpulse service", // command long describe
+	)
 
-	database.Connect(config.URI, config.Database)
-	utils.InitStripe()
-
-	r := routes.NewRouter()
-	c := cors.New(cors.Options{
-		AllowedOrigins: []string{"*"},
-		AllowedHeaders: []string{"Access-Control-Allow-Origin", "origin", "X-Requested-With", "Authorization", "Content-Type", "Language"},
-		AllowedMethods: []string{"DELETE", "POST", "GET", "PUT"},
-	})
-
-	handler := c.Handler(r)
-
-	var port string
-	if os.Getenv("PORT") == "" {
-		port = ":8000"
-	} else {
-		port = ":" + os.Getenv("PORT")
-	}
-
-	err := http.ListenAndServe(port, handler)
-	if err != nil {
-		log.Fatal(err)
-	}
+	// Execute start application
+	core.Execute()
 }
