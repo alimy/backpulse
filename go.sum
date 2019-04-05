@@ -10,8 +10,6 @@ github.com/Shopify/sarama v1.19.0/go.mod h1:FVkBWblsNy7DGZRfXLU0O9RCGt5g3g3yEuWX
 github.com/Shopify/toxiproxy v2.1.4+incompatible/go.mod h1:OXgGpZ6Cli1/URJOF1DMxUHB2q5Ap20/P/eIdh4G0pI=
 github.com/alecthomas/template v0.0.0-20160405071501-a0175ee3bccc/go.mod h1:LOuyumcjzFXgccqObfd/Ljyb9UuFJ6TxHnclSeseNhc=
 github.com/alecthomas/units v0.0.0-20151022065526-2efee857e7cf/go.mod h1:ybxpYRFXyAe+OPACYpWeL0wqObRcbAqCMya13uyzqw0=
-github.com/alimy/backpulse-dashboard v0.0.0-20190405082850-58ce4f838124 h1:NWeETPYT5f/AEra9oLaJVWdjjiniBP4PCoFpeT5zcRw=
-github.com/alimy/backpulse-dashboard v0.0.0-20190405082850-58ce4f838124/go.mod h1:M8m/JcOextpWuKDJBT2Qr53ka6BGyZYBdQEicisA2rM=
 github.com/alimy/backpulse-frontpulse v0.0.0-20190405082105-5fbba9d069f9 h1:OYdpwzq23y2SlaAlccrbqRqzA8ciEpKmpFl9IUJgqX4=
 github.com/alimy/backpulse-frontpulse v0.0.0-20190405082105-5fbba9d069f9/go.mod h1:i+6IXZa3Pvh5e1g98QPR/F8vBKBmZCHHKUmdy4u2/Q8=
 github.com/anmitsu/go-shlex v0.0.0-20161002113705-648efa622239/go.mod h1:2FmKhYUyUczH0OGQWaF5ceTx0UBShxjsH6f8oGKYe2c=
@@ -21,6 +19,8 @@ github.com/asaskevich/govalidator v0.0.0-20180315120708-ccb8e960c48f h1:y2hSFdXe
 github.com/asaskevich/govalidator v0.0.0-20180315120708-ccb8e960c48f/go.mod h1:lB+ZfQJz7igIIfQNfa7Ml4HSf2uFQQRzpGGRXenZAgY=
 github.com/auth0/go-jwt-middleware v0.0.0-20170425171159-5493cabe49f7 h1:irR1cO6eek3n5uquIVaRAsQmZnlsfPuHNz31cXo4eyk=
 github.com/auth0/go-jwt-middleware v0.0.0-20170425171159-5493cabe49f7/go.mod h1:LWMyo4iOLWXHGdBki7NIht1kHru/0wM179h+d3g8ATM=
+github.com/backpulse/dashboard v0.0.0-20190405130740-9874f6c857d7 h1:rKVa8erjX4gGIRcltI9DeM89iZlhl3tgKZ0ktC/kA7U=
+github.com/backpulse/dashboard v0.0.0-20190405130740-9874f6c857d7/go.mod h1:rolNADE0STnLyIzntpnzWyUsTKSDrJBftTIscqlYq8U=
 github.com/beorn7/perks v0.0.0-20180321164747-3a771d992973/go.mod h1:Dwedo/Wpr24TaqPxmxbtue+5NUziq4I4S80YR8gNf3Q=
 github.com/bradfitz/go-smtpd v0.0.0-20170404230938-deb6d6237625/go.mod h1:HYsPBTaaSFSlLx/70C2HPIMNZpVV8+vt/A+FMnYP11g=
 github.com/client9/misspell v0.3.4/go.mod h1:qj6jICC3Q7zFZvVWo7KLAzC3yx5G7kyvSDkc90ppPyw=

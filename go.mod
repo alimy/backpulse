@@ -4,10 +4,10 @@ go 1.12
 
 require (
 	cloud.google.com/go v0.37.2
-	github.com/alimy/backpulse-dashboard v0.0.0-20190405082850-58ce4f838124
 	github.com/alimy/backpulse-frontpulse v0.0.0-20190405082105-5fbba9d069f9
 	github.com/asaskevich/govalidator v0.0.0-20180315120708-ccb8e960c48f
 	github.com/auth0/go-jwt-middleware v0.0.0-20170425171159-5493cabe49f7
+	github.com/backpulse/dashboard v0.0.0-20190405130740-9874f6c857d7
 	github.com/coreos/go-semver v0.2.0
 	github.com/dgrijalva/jwt-go v3.2.0+incompatible
 	github.com/gorilla/context v1.1.1

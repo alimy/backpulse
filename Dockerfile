@@ -11,4 +11,4 @@ WORKDIR /app/backpulse
 COPY --from=binaryBuilder /go/src/github.com/backpulse/core/backpulse .
 
 EXPOSE 8000
-CMD ["./backpulse"]
+CMD ["./backpulse", "serve"]
