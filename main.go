@@ -4,6 +4,7 @@ import (
 	"github.com/backpulse/core/cmd/core"
 
 	_ "github.com/backpulse/core/cmd/dashboard"
+	_ "github.com/backpulse/core/cmd/frontpulse"
 	_ "github.com/backpulse/core/cmd/serve"
 	_ "github.com/backpulse/core/cmd/version"
 )

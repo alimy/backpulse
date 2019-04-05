@@ -12,6 +12,8 @@ github.com/alecthomas/template v0.0.0-20160405071501-a0175ee3bccc/go.mod h1:LOuy
 github.com/alecthomas/units v0.0.0-20151022065526-2efee857e7cf/go.mod h1:ybxpYRFXyAe+OPACYpWeL0wqObRcbAqCMya13uyzqw0=
 github.com/alimy/backpulse-dashboard v0.0.0-20190405082850-58ce4f838124 h1:NWeETPYT5f/AEra9oLaJVWdjjiniBP4PCoFpeT5zcRw=
 github.com/alimy/backpulse-dashboard v0.0.0-20190405082850-58ce4f838124/go.mod h1:M8m/JcOextpWuKDJBT2Qr53ka6BGyZYBdQEicisA2rM=
+github.com/alimy/backpulse-frontpulse v0.0.0-20190405082105-5fbba9d069f9 h1:OYdpwzq23y2SlaAlccrbqRqzA8ciEpKmpFl9IUJgqX4=
+github.com/alimy/backpulse-frontpulse v0.0.0-20190405082105-5fbba9d069f9/go.mod h1:i+6IXZa3Pvh5e1g98QPR/F8vBKBmZCHHKUmdy4u2/Q8=
 github.com/anmitsu/go-shlex v0.0.0-20161002113705-648efa622239/go.mod h1:2FmKhYUyUczH0OGQWaF5ceTx0UBShxjsH6f8oGKYe2c=
 github.com/apache/thrift v0.12.0/go.mod h1:cp2SuWMxlEZw2r+iP2GNCdIi4C1qmUzdZFSVb+bacwQ=
 github.com/armon/consul-api v0.0.0-20180202201655-eb2c6b5be1b6/go.mod h1:grANhF5doyWs3UAsr3K4I6qtAmlQcZDesFNEHPZAzj8=
