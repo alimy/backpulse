@@ -31,8 +31,12 @@ ENV DATABASE backpulse
 
 VOLUME ["/data"]
 
+# 8000: backend data interface agent.
+# 3000: dashboard ui agent.
+# 3001: frontpulse ui agent.
 EXPOSE 8000
 EXPOSE 3000
+EXPOSE 3001
 
 ENTRYPOINT ["/app/backpulse/docker/start.sh"]
 CMD ["/bin/s6-svscan", "/app/backpulse/docker/s6/"]
