@@ -12,7 +12,7 @@ FROM alpine:latest
 ADD https://github.com/tianon/gosu/releases/download/1.11/gosu-amd64 /usr/sbin/gosu
 RUN chmod +x /usr/sbin/gosu \
   && echo http://dl-2.alpinelinux.org/alpine/edge/community/ >> /etc/apk/repositories \
-  && apk --no-cache --no-progress add bash s6
+  && apk --no-cache --no-progress add bash s6 shadow
 
 # Configure LibC Name Service
 COPY hack/docker/nsswitch.conf /etc/nsswitch.conf
