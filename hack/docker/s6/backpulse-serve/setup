@@ -1,0 +1,9 @@
+#!/bin/sh
+
+cd /app/backpulse
+
+# Link volumed data with app data
+if [ ! -e log]; then
+    ln -sn /data/backpulse/log  log
+    ln -sn /data/backpulse/data data
+fi
