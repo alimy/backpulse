@@ -2,7 +2,7 @@
 
 create_volume_subfolder() {
     # Create VOLUME subfolder
-    for f in /data/backpulse/data /data/backpulse/conf /data/backpulse/log; do
+    for f in /data/log; do
         if ! test -d $f; then
             mkdir -p $f
         fi

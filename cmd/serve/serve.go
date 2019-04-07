@@ -5,11 +5,16 @@ import (
 	"github.com/backpulse/core/database"
 	"github.com/backpulse/core/routes"
 	"github.com/backpulse/core/utils"
+	"github.com/joho/godotenv"
 	"github.com/rs/cors"
 	"github.com/spf13/cobra"
 	"log"
 	"net/http"
 	"os"
+)
+
+var (
+	envFile string
 )
 
 func init() {
@@ -20,12 +25,16 @@ func init() {
 		Run:   serveRun,
 	}
 
+	// Parse flags for serveCmd
+	serveCmd.Flags().StringVar(&envFile, "env", ".env", "env config file")
+
 	// Register serveCmd as sub-command
 	core.Register(serveCmd)
 }
 
 func serveRun(cmd *cobra.Command, args []string) {
 	log.SetFlags(log.LstdFlags | log.Lshortfile)
+	godotenv.Load(envFile)
 	config := utils.GetConfig()
 
 	database.Connect(config.URI, config.Database)

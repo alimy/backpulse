@@ -3,5 +3,4 @@
 cd /app/backpulse
 
 # Link volumed data with app data
-ln -sfn /data/backpulse/log  log
-ln -sfn /data/backpulse/data data
+ln -sfn /data/log  log
