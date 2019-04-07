@@ -26,7 +26,7 @@ COPY --from=binaryBuilder /go/src/github.com/backpulse/core/backpulse .
 RUN ./docker/finalize.sh
 
 # Configure Docker Container
-ENV MONGODB_URI mongodb://$mongodb:27017
+ENV MONGODB_URI mongodb://mongodb:27017
 ENV DATABASE backpulse
 
 VOLUME ["/data"]
