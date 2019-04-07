@@ -12,7 +12,7 @@ FROM alpine:latest
 ADD https://github.com/tianon/gosu/releases/download/1.11/gosu-amd64 /usr/sbin/gosu
 RUN chmod +x /usr/sbin/gosu \
   && echo http://dl-2.alpinelinux.org/alpine/edge/community/ >> /etc/apk/repositories \
-  && apk --no-cache --no-progress add bash
+  && apk --no-cache --no-progress add bash s6
 
 # Configure LibC Name Service
 COPY hack/docker/nsswitch.conf /etc/nsswitch.conf
@@ -35,4 +35,4 @@ EXPOSE 8000
 EXPOSE 3000
 
 ENTRYPOINT ["/app/backpulse/docker/start.sh"]
-CMD ["./backpulse", "serve"]
+CMD ["/bin/s6-svscan", "/app/backpulse/docker/s6/"]
