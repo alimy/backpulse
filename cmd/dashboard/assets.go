@@ -1,7 +1,7 @@
 package serve
 
 import (
-	"github.com/backpulse/dashboard/dist"
+	"github.com/alimy/backpulse-dashboard/dist"
 	"net/http"
 )
 
