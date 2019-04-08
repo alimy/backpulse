@@ -4,6 +4,8 @@ go 1.11
 
 require (
 	cloud.google.com/go v0.37.2
+	github.com/alimy/mir v1.0.0
+	github.com/alimy/mir/module/mux v0.0.0-20190407171150-94755db059be
 	github.com/asaskevich/govalidator v0.0.0-20180315120708-ccb8e960c48f
 	github.com/auth0/go-jwt-middleware v0.0.0-20170425171159-5493cabe49f7
 	github.com/dgrijalva/jwt-go v3.2.0+incompatible
@@ -23,5 +25,4 @@ require (
 	gopkg.in/check.v1 v1.0.0-20180628173108-788fd7840127 // indirect
 	gopkg.in/gomail.v2 v2.0.0-20160411212932-81ebce5c23df
 	gopkg.in/mgo.v2 v2.0.0-20180705113604-9856a29383ce
-	gopkg.in/yaml.v2 v2.2.2 // indirect
 )

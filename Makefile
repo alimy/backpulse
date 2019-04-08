@@ -61,6 +61,10 @@ misspell:
 	fi
 	misspell -w $(GOFILES)
 
+.PHONY: api
+api:
+	docker run -it --rm -p 8080:80 -v $(PWD)/api/openapi.yaml:/usr/share/nginx/html/openapi.yaml -e SPEC_URL=openapi.yaml redocly/redoc
+
 .PHONY: tools
 tools:
 	$(GO_OFF) get golang.org/x/lint/golint

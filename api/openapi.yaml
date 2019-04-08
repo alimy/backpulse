@@ -1,0 +1,95 @@
+openapi: 3.0.2
+servers:
+  - description: Backpulse Service
+    url: https://api.backpulse.io/
+info:
+  description: Backpulse Service API
+  version: "1.0.0"
+  title: Backpulse Service API
+  contact:
+    email: contact@backpulse.io
+  license:
+    name: MIT License
+    url: 'https://github.com/backpulse/core/blob/master/LICENSE'
+paths:
+  /admin/about/{name}:
+    get:
+      summary: Get about content of site
+      operationId: GetAbout
+      description: |
+        Get about content of site
+      responses:
+        '200':
+          description: Main page data
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SiteDataWrap'
+        '401':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorModel'
+    put:
+      summary: Update about content of site
+      operationId: UpdateAbout
+      description: |
+        Update about content of site
+      responses:
+        '200':
+          description: Update success
+        '401':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorModel'
+components:
+  schemas:
+    ErrorModel:
+      type: object
+      required:
+        - errno
+        - errmsg
+        - data
+      properties:
+        errno:
+          type: integer
+          format: int32
+          example: 401
+        errmsg:
+          type: string
+          example: "Not Found"
+        data:
+          type: object
+    SuccessModel:
+      type: object
+      required:
+        - errno
+        - errmsg
+      properties:
+        errno:
+          type: integer
+          format: int32
+          example: 200
+        errmsg:
+          type: string
+          example: ""
+    SiteDataWrap:
+      allOf:
+        - $ref: '#/components/schemas/SuccessModel'
+        - type: object
+          required:
+            - data
+          properties:
+            data:
+              $ref: '#/components/schemas/SiteData'
+    SiteData:
+      type: object
+      required:
+        - id
+      properties:
+        id:
+          type: string
+          example: 116011

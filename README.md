@@ -78,6 +78,11 @@ You're all set to run **Backpulse**!
 go build -o backpulse && backpulse
 ```
 
+## OpenAPI Document
+```bash
+make api # visite in http://localhost:8080
+```
+
 **Note**: By default Backpulse runs on port 8000, but can be overridden with the `PORT` environment variable.
 
 ## Contributing
