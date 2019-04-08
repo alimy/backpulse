@@ -4,8 +4,8 @@ go 1.11
 
 require (
 	cloud.google.com/go v0.37.2
-	github.com/alimy/mir v1.0.0
-	github.com/alimy/mir/module/mux v0.0.0-20190407171150-94755db059be
+	github.com/alimy/mir v1.0.1
+	github.com/alimy/mir/module/mux v0.0.0-20190408053017-8c52ecd63261
 	github.com/asaskevich/govalidator v0.0.0-20180315120708-ccb8e960c48f
 	github.com/auth0/go-jwt-middleware v0.0.0-20170425171159-5493cabe49f7
 	github.com/dgrijalva/jwt-go v3.2.0+incompatible
