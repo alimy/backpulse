@@ -22,6 +22,15 @@ func GetTrack(trackID bson.ObjectId) (models.Track, error) {
 	return track, err
 }
 
+// GetTrack : return specific track by shortID
+func GetTrackByShortID(shortID string) (models.Track, error) {
+	var track models.Track
+	err := DB.C(tracksCollection).Find(bson.M{
+		"short_id": shortID,
+	}).One(&track)
+	return track, err
+}
+
 // GetAlbumTracks : return array of track for specific album
 func GetAlbumTracks(id bson.ObjectId) ([]models.Track, error) {
 	var tracks []models.Track
@@ -35,9 +44,10 @@ func GetAlbumTracks(id bson.ObjectId) ([]models.Track, error) {
 func UpdateTrack(id bson.ObjectId, track models.Track) error {
 	err := DB.C(tracksCollection).UpdateId(id, bson.M{
 		"$set": bson.M{
-			"title": track.Title,
-			"url":   track.URL,
-			"image": track.Image,
+			"title":   track.Title,
+			"url":     track.URL,
+			"image":   track.Image,
+			"content": track.Content,
 		},
 	})
 	return err

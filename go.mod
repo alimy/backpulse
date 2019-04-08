@@ -6,6 +6,8 @@ require (
 	cloud.google.com/go v0.37.2
 	github.com/alimy/backpulse-dashboard v0.0.0-20190407035813-a2225f27f97c
 	github.com/alimy/backpulse-frontpulse v0.0.0-20190405082105-5fbba9d069f9
+	github.com/alimy/mir v1.0.0
+	github.com/alimy/mir/module/mux v0.0.0-20190407171150-94755db059be
 	github.com/asaskevich/govalidator v0.0.0-20180315120708-ccb8e960c48f
 	github.com/auth0/go-jwt-middleware v0.0.0-20170425171159-5493cabe49f7
 	github.com/coreos/go-semver v0.2.0
@@ -22,6 +24,7 @@ require (
 	github.com/teris-io/shortid v0.0.0-20160104014424-6c56cef5189c
 	github.com/urfave/negroni v1.0.0
 	golang.org/x/crypto v0.0.0-20190308221718-c2843e01d9a2
+	golang.org/x/sys v0.0.0-20190215142949-d0b11bdaac8a
 	google.golang.org/api v0.3.0
 	gopkg.in/alexcesaro/quotedprintable.v3 v3.0.0-20150716171945-2caba252f4dc
 	gopkg.in/check.v1 v1.0.0-20180628173108-788fd7840127 // indirect

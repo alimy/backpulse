@@ -23,7 +23,7 @@ build: fmt
 ci: misspell lint vet test
 
 .PHONY: test
-test:
+test: fmt
 	$(GO_ON) test -race ./...
 
 .PHONY: fmt
@@ -63,6 +63,10 @@ misspell:
 		$(GO_OFF) get -u github.com/client9/misspell/cmd/misspell; \
 	fi
 	misspell -w $(GOFILES)
+
+.PHONY: api
+api:
+	docker run -it --rm -p 8080:80 -v $(PWD)/api/openapi.yaml:/usr/share/nginx/html/openapi.yaml -e SPEC_URL=openapi.yaml redocly/redoc
 
 .PHONY: tools
 tools:
